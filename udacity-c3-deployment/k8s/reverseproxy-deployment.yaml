@@ -3,13 +3,16 @@ kind: Deployment
 metadata:
   labels:
     service: reverseproxy
+    version: v1
+    env: dev
   name: reverseproxy
 spec:
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
         service: reverseproxy
+        version: v1
     spec:
       containers:
       - image: scheele/reverseproxy

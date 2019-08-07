@@ -11,7 +11,9 @@ services:
   backend_feed:
     build:
       context: ../../udacity-c3-restapi-feed  
-    image: scheele/udacity-restapi-feed
+    #original image name - changed to demonstrate CD
+    #image: scheele/udacity-restapi-feed
+    image: mitschen/udacity-restapi-feed
   frontend:
     build:
       context: ../../udacity-c3-frontend  

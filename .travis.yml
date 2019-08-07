@@ -22,7 +22,7 @@ install:
 
 deploy:
   provider: script
-  script: udacity-c3-deployment/docker_push.sh
+  script: bash $TRAVIS_BUILD/udacity-c3-deployment/docker_push.sh
   skip_cleanup: true
   on:
     branch: develop

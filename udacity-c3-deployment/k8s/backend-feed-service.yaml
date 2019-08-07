@@ -10,4 +10,5 @@ spec:
     port: 8080
     targetPort: 8080
   selector:
+  #the label of the pod i would like to connect to
     service: backend-feed

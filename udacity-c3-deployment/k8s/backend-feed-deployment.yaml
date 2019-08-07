@@ -2,14 +2,19 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
+    #label to be used to be references by a service
     service: backend-feed
+    version: v1
+    env: dev
   name: backend-feed
 spec:
-  replicas: 3
+  #reduce the replica set to avoid creating more than one medium ec2 instances
+  replicas: 1
   template:
     metadata:
       labels:
         service: backend-feed
+        version: v1
     spec:
       containers:
       - image: scheele/udacity-restapi-feed

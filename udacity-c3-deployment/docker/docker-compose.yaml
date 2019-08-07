@@ -21,7 +21,9 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   backend-feed:
-    image: scheele/udacity-restapi-feed
+    #rename the image to demonstarte CD
+    #image: scheele/udacity-restapi-feed
+    image: mitschen/udacity-restapi-feed
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
